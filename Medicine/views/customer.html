@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+</style>
+<body text="#E65100" >
+
+<div style="padding:5px; background-color:grey;">
+	<h1 style="text-align:center;">Support/Contact Us</h1>
+</div>
+
+<div style="padding:30px; padding-top:15px; padding-bottom:15px; margin:25px; margin-left:70px; margin-right:80px; background-color:grey;">
+    <h2 style="text-align:center;"> Enter your Details </h2>
+    <div>
+        <form method="post" action="../customertable.jsp">
+            <table style="width:100%">
+                <tr>
+                    <td>
+                        <input type="email" style="width:900px; margin-left:50px; height:35px;" required name="papr_contact_us_email"
+                             placeholder="Enter your email">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="tel" style="width:900px; margin-top:20px; margin-left:50px; height:45px;" id="contact_us_phone"
+                            name="papr_contact_us_phone"
+                            placeholder="Enter your phone">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <textarea style="width:900px; margin-top:20px; margin-left:50px;" placeholder="Write your query here"
+                           name="text" rows="4"
+                            style="resize: vertical;"></textarea>
+                    </td>
+                </tr>
+            </table>
+            <div style="text-align:center;">
+                <input type="submit" style="margin-top:20px;" name="submit" />
+            </div>
+        </form>
+        <br>
+    </div>
+</div>
+    
+</body>
+</html>

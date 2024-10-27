@@ -1,0 +1,7 @@
+connect system/Anusha; OR ( connect system; ) Password : Anusha
+
+To know the users role: SELECT * FROM login;
+[ Admin username: anusha@2004 password: Nani ]
+[ User username: anusha@2007 password: jyoshna ]
+
+URL: http://localhost:8081/Medicine/views/mainpage2.jsp

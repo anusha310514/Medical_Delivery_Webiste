@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .login-container {
+      width: 300px;
+      margin: 0 auto;
+      padding: 35px;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+	border-color:#305e14;
+    }
+
+    .login-container h2 {
+      text-align: center;
+    }
+
+    .login-container input[type="text"],
+    .login-container input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .login-container input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .login-container input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body bgcolor="#ffecb3" text="#305e14">
+<center>
+<h1>ADMIN REGISTRATION FORM</h1>
+<hr color="black"><br><br>
+</center>
+  <div class="login-container">
+    <form action="../shoptable.jsp" method="post">
+     <label for="shopowner name"><b>ShopOwner Name</b></label>
+      <input type="text" placeholder="Enter ShopOwner Name" name="name" required>
+      <label for="shopid"><b>Shop ID</b></label>
+      <input type="text" placeholder="Enter ShopID" name="shopid" required>
+     <label for="area"><b>Area</b></label>
+      <input type="text" placeholder="Enter Area" name="area" required>
+
+      <label for="pincode"><b>Pincode</b></label>
+      <input type="text" placeholder="Enter Pincode" name="pincode" required>
+	  <center><br>
+      <button type="submit">Login</button>
+      </center>
+    </form>
+    
+  </div>
+</body>
+</html>

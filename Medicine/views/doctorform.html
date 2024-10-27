@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #90A4AE;
+  color: blue;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+</head>
+<body bgcolor="#90A4AE" text="#880E4F">
+
+<div class="container">
+  <div style="text-align:center">
+    <hr>
+    <h2>DOCTOR AT YOUR HOME</h2>
+    <p>(South ByPass,NTR Park,Ongole,PhNo:7989422049)</p>
+    <hr>
+  </div>
+  <div class="row">
+    <div class="column">
+      <h1>DOCTORS AVAILABLE</h1>
+      <img src="../images/doctor/doctor1.jpg" style="width:26%">
+      <img src="../images/doctor/doctor2.jpg" style="width:27%">
+      <img src="../images/doctor/doctor3.jpg" style="width:26%">
+      <hr>
+      <img src="../images/doctor/doctor4.jpg" style="width:26%">
+      <img src="../images/doctor/doctor5.jpg" style="width:26%">
+      <img src="../images/doctor/doctor6.jpg" style="width:26%">
+      <hr>
+      <img src="../images/doctor/doctor7.jpg" style="width:38%">
+      <img src="../images/doctor/doctor8.jpg" style="width:26%">
+      <img src="../images/doctor/doctor9.jpg" style="width:29%">
+      <hr color="#90A4AE">
+	<img src="../images/doctor/doctor10.jpg" style="width:26%">
+      <img src="../images/doctor/doctor11.jpg" style="width:27%">
+      <img src="../images/doctor/doctor12.jpg" style="width:26%">
+	<hr>
+    </div>
+    <div class="column">
+      <form action="../doctortable.jsp">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your First name..">
+
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+        <label for="age">Age</label>
+        <input type="text" id="age" name="age" placeholder="Your Age..">
+
+        <label for="Address">Address</label>
+        <input type="text" id="Address" name="address" placeholder="Your Address..">
+
+        <label for="city">City</label>
+        <input type="text" id="city" name="city" placeholder="Your city..">
+
+        <label for="phno">PhoneNumber</label>
+        <input type="text" id="PhoneNumber" name="phno" placeholder="Your PhoneNumber..">
+
+        <label for="Problem">Problem your suffering</label>
+        <textarea id="Problem" name="problem" placeholder="Write your Problem.." style="height:170px"></textarea>
+
+        <label for="doctor">Will Doctor visit or You?</label>
+        <select id="doctor" name="doctor">
+          <option value="  ">........</option>
+          <option value="Doctor Visit">Doctor will Visit</option>
+          <option value="You will visit">You will Visit</option>
+        </select>
+
+        <label for="doctortype">Type of Doctor</label>
+        <select id="doctortype" name="doctortype">
+          <option value="  ">........</option>
+          <option value="Stomach Disease">Stomach Disease</option>
+          <option value="Liver Disease">Liver Disease</option>
+          <option value="Kidney Disease">Kidney Disease</option>
+          <option value="Mouth Disease">Mouth Disease</option>
+          <option value="Asthama">Asthama</option>
+          <option value="Liver Disease">Liver Disease</option>
+          <option value="BodyPains">BodyPains</option>
+          <option value="Heart Disease">Heart Disease</option>
+        </select>
+
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

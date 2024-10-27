@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+* {box-sizing: border-box;}
+
+aside {
+  width: 35%;
+  font-size: 32px;
+  padding-left: 1px;
+  margin-left: 5px;
+  margin-top:-60px;
+  float: right;
+  text-color: green;
+}
+
+.container {
+  padding: 6px;
+}
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+button {
+  background-color: green;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: red;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+</head>
+<body text="purple">
+<hr color="green">
+<h1>SignUp</h1>
+<aside>
+<a href="login.html"><b>Login</b></a>
+</aside>
+<hr color="green">
+<div style="padding-left:16px">
+  <form class="modal-content" action="../signup.jsp">
+    <div class="container">
+      <h2>To Create your Account, Please SignUp</h2>
+      <label for="email">Email</label>
+      <input type="text" placeholder="Enter Email" name="uname" required>
+
+      <label for="psw">Password</label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+      
+      <label for="psw-repeat">PhoneNumber</label>
+      <input type="text" placeholder="Enter PhoneNumber" name="phno" required>
+      
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+
+      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+</body>
+</html>

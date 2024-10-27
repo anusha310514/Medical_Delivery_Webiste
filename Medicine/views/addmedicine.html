@@ -1,0 +1,67 @@
+<%@ page import="java.sql.*" %>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Medicine</title>
+<style>
+    .shop-card {
+      display: inline-block;
+      width: 25%;
+      margin: 7px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body style='background-color: red;'>
+<center>
+<h1>MEDICINE SELECTION</h1>
+<hr>
+</center>
+
+	
+  <%
+    Connection conn = null;
+    try 
+	{
+	Class.forName("oracle.jdbc.driver.OracleDriver");
+      conn=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","system","Anusha");
+      Statement stmt = conn.createStatement();
+      ResultSet rs = stmt.executeQuery("SELECT * FROM adminmedicine");
+
+	int count=0;
+      while (rs.next()) {
+        String shopName = rs.getString("name");
+        String address = rs.getString("composition");
+		if (count % 3 == 0) {
+          if (count > 0) {
+            out.println("</div>");
+          }
+          out.println("<div class=\"row\">");
+        }
+	  out.println("<div class=\"shop-card\">");
+	  out.println("<a href=\"Orderform.html\">");
+	  out.println("<img src=\"images/shopnames/meghana.jpg\" alt=\"meghana\" style=\"width:92%\"></a>");
+        out.println("<h3><strong>Shop Name:</strong> " + shopName + "</h3>");
+        out.println("<p><strong>Address:</strong> " + address + "</p>");
+	  out.println("</div>");
+
+	  count++;
+
+      }
+    } catch (SQLException e) {
+      e.printStackTrace();
+    } finally {
+      if (conn != null) {
+        try {
+          conn.close();
+        } catch (SQLException e) {
+          e.printStackTrace();
+        }
+      }
+    }
+  %>
+</body>
+</html>
